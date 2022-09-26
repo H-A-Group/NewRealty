@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate/config/routes/app_routes.dart';
-import 'package:real_estate/presentation/widgets/taped_routs.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/assets_manager.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
