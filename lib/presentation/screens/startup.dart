@@ -11,88 +11,90 @@ class StartUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding:  EdgeInsets.only( 
-          right: context.height * 0.03,
-          left: context.height * 0.03
-         ),
+        padding: EdgeInsets.only(
+            right: context.height * 0.03, left: context.height * 0.03),
         child: Expanded(
-          child: Column( mainAxisAlignment: MainAxisAlignment.center,
-            children:  [
-            Expanded( 
-              child: GridView.count(
-                shrinkWrap: false,
-                crossAxisCount: 2,
-                mainAxisSpacing: context.width*0.02,
-                crossAxisSpacing: context.height*0.02,
-                 children: [
-                  Container(
-                    clipBehavior:Clip.hardEdge ,
-                    width: context.width*0.5,
-                    height: context.height*0.5,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Image.asset("assets/images/login1.png")),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: GridView.count(
+                  shrinkWrap: false,
+                  crossAxisCount: 2,
+                  mainAxisSpacing: context.width * 0.02,
+                  crossAxisSpacing: context.height * 0.02,
+                  children: [
                     Container(
-                    clipBehavior:Clip.hardEdge ,
-                    width: context.width*0.5,
-                    height: context.height*0.5,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-                    child: Image.asset("assets/images/login2.png")),
+                        clipBehavior: Clip.hardEdge,
+                        width: context.width * 0.5,
+                        height: context.height * 0.5,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Image.asset("assets/images/login1.png")),
                     Container(
-                    clipBehavior:Clip.hardEdge ,
-                   width: context.width*0.5,
-                    height: context.height*0.5,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-                    child: Image.asset("assets/images/login3.png")),
-                     Container(
-                    clipBehavior:Clip.hardEdge ,
-                    width: context.width*0.5,
-                    height: context.height*0.5,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-                    child: Image.asset("assets/images/splash_image.png",
-                    fit: BoxFit.cover,
-                    
-                    )),
-                  
-                 ],
-              
-              ),
-            ),
-          
-           Row(
-             children: [
-               Text("Ready to ", style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                color: AppColors.darkBlue,
-                fontSize: 25
-               ), ),
-               Text("explore?", style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                color: AppColors.darkBlue,
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
-                
-               ), ),
-              
-             ],
-           ),
-            SizedBox(height: context.height* 0.03),
-               StartButton(
-                text: "Continue with Email", 
-               width: context.width*0.8, 
-               height: context.height*0.09,
-                onTap: (){},
-              icon: Icons.email,
+                        clipBehavior: Clip.hardEdge,
+                        width: context.width * 0.5,
+                        height: context.height * 0.5,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Image.asset("assets/images/login2.png")),
+                    Container(
+                        clipBehavior: Clip.hardEdge,
+                        width: context.width * 0.5,
+                        height: context.height * 0.5,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Image.asset("assets/images/login3.png")),
+                    Container(
+                        clipBehavior: Clip.hardEdge,
+                        width: context.width * 0.5,
+                        height: context.height * 0.5,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Image.asset(
+                          "assets/images/splash_image.png",
+                          fit: BoxFit.cover,
+                        )),
+                  ],
                 ),
-                
-               SizedBox(height: context.height* 0.01),
-                
-                buildSigninButtons(context),
-                
-                SizedBox(height: context.height*0.001,)
+              ),
+              Row(
+                children: [
+                  Text(
+                    "Ready to ",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium!
+                        .copyWith(color: AppColors.darkBlue, fontSize: 25),
+                  ),
+                  Text(
+                    "explore?",
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: AppColors.darkBlue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                        ),
+                  ),
+                ],
+              ),
+              SizedBox(height: context.height * 0.03),
+              StartButton(
+                text: "Continue with Email",
+                width: context.width * 0.8,
+                height: context.height * 0.09,
+                onTap: () {},
+                icon: Icons.email,
+              ),
+              SizedBox(height: context.height * 0.01),
+              buildSigninButtons(context),
+              SizedBox(
+                height: context.height * 0.001,
+              )
             ],
           ),
         ),
       ),
-
     );
   }
 }

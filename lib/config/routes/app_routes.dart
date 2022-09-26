@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:real_estate/core/utils/app_strings.dart';
+import 'package:real_estate/presentation/screens/login_screen.dart';
 import 'package:real_estate/presentation/screens/on_boarding_screen.dart';
 import 'package:real_estate/presentation/screens/splash_screen.dart';
 import 'package:real_estate/presentation/screens/startup.dart';
@@ -8,7 +9,8 @@ import 'package:real_estate/presentation/screens/startup.dart';
 class Routes {
   static const String initialRout = '/';
   static const String onBoardingRout = '/onBoarding';
-  static const String sinInRout = '/signIn';
+  static const String logInRout = '/logIn';
+  static const String startupRout = '/startup';
 }
 
 class AppRoutes {
@@ -22,9 +24,13 @@ class AppRoutes {
         return CupertinoPageRoute(builder: (context) {
           return const OnBoardingScreen();
         });
-      case Routes.sinInRout:
+      case Routes.startupRout:
         return CupertinoPageRoute(builder: (context) {
           return const StartUp();
+        });
+      case Routes.logInRout:
+        return CupertinoPageRoute(builder: (context) {
+          return LoginScreen();
         });
       default:
         return undefinedRoute();
