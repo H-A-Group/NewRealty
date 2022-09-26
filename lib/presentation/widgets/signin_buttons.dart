@@ -40,7 +40,7 @@ Widget buildSigninButtons (BuildContext context)=>  Column(
                           color: AppColors.grey,
                           borderRadius: BorderRadius.circular(40)
                         ),
-                      child: Center(child: SvgPicture.asset("assets/images/logo/g.svg")),
+                      child: Center(child: SvgPicture.asset("assets/icons/g.svg")),
                     
                       ),
                     ),
@@ -54,7 +54,7 @@ Widget buildSigninButtons (BuildContext context)=>  Column(
                           color: AppColors.grey,
                           borderRadius: BorderRadius.circular(40),
                         ),
-                        child: Center(child: SvgPicture.asset("assets/images/logo/f.svg")),
+                        child: Center(child: SvgPicture.asset("assets/icons/f.svg")),
                       ),
                     ),
                   ],

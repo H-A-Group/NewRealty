@@ -15,6 +15,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   flutter_svg: ^1.1.5
   icon_broken: ^0.0.1
+ 
   
 dev_dependencies:
   flutter_test:
@@ -26,6 +27,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/logo/
+    - assets/icons/
   # fonts:
   #   - family: IconBroken
   #     fonts:

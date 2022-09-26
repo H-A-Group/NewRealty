@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/config/routes/app_routes.dart';
+import 'package:real_estate/presentation/widgets/taped_routs.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'package:real_estate/core/utils/app_colors.dart';
@@ -55,7 +57,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
             const Spacer(),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(context, Routes.startupRout);
+              },
               child: Container(
                 width: context.width * 0.2,
                 height: context.height * 0.04,
