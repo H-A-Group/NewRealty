@@ -10,4 +10,5 @@ class AppColors {
   static Color green = HexColor('8BC83F');
   static Color white = Colors.white;
   static Color black = Colors.black;
+  static Color normalGrey = Colors.grey; 
 }
