@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/config/routes/app_routes.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
 import 'package:real_estate/presentation/widgets/signin_buttons.dart';
 import 'package:real_estate/presentation/widgets/start_button.dart';
+
 
 class StartUp extends StatelessWidget {
   const StartUp({super.key});
@@ -83,8 +85,10 @@ class StartUp extends StatelessWidget {
                 text: "Continue with Email",
                 width: context.width * 0.8,
                 height: context.height * 0.09,
-                onTap: () {},
-                icon: Icons.email,
+                onTap: () {
+                  Navigator.pushNamed(context,Routes.logInRout);
+                },
+                icon: Icons.email_outlined,
               ),
               SizedBox(height: context.height * 0.01),
               buildSigninButtons(context),
