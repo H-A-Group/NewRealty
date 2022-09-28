@@ -83,7 +83,7 @@ class SplashScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
                             ),
-                      )
+                      ),
                     ],
                   ),
                   textAlign: TextAlign.center,

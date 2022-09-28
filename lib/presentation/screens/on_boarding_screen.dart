@@ -107,7 +107,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   isSecond = false;
                   isLast = false;
                 });
-              } 
+              }
             },
           ),
           Column(
@@ -135,6 +135,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 height: context.height * 0.07,
                 onTap: () {
                   if (isLast) {
+                    Navigator.pushReplacementNamed(context, Routes.startupRout);
                   } else {
                     _pageController.nextPage(
                       duration: const Duration(milliseconds: 700),
