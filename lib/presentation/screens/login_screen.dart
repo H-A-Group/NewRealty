@@ -4,8 +4,6 @@ import 'package:real_estate/core/utils/media_query_values.dart';
 import 'package:real_estate/presentation/widgets/formfilds.dart';
 import 'package:real_estate/presentation/widgets/main_button.dart';
 import 'package:real_estate/presentation/widgets/signin_buttons.dart';
-import 'package:icon_broken/icon_broken.dart';
-
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -18,8 +16,8 @@ class LoginScreen extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.only(
           top: context.height * 0.05,
-          left: context.width * 0.02,
-          right: context.width * 0.02,
+          left: context.width * 0.08,
+          right: context.width * 0.08,
           bottom: context.height * 0.02,
         ),
         child: Expanded(
@@ -37,9 +35,10 @@ class LoginScreen extends StatelessWidget {
                     Text(
                       "let's",
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: AppColors.darkBlue,
-                          fontSize: 25,
-                          fontWeight: FontWeight.normal),
+                            color: AppColors.darkBlue,
+                            fontSize: 25,
+                            fontWeight: FontWeight.normal,
+                          ),
                     ),
                     Text(
                       " Sign ln",
@@ -48,14 +47,14 @@ class LoginScreen extends StatelessWidget {
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                           ),
-                    )
+                    ),
                   ],
                 ),
                 SizedBox(
                   height: context.height * 0.05,
                 ),
                 Text(
-                  "Welcom Back . Explore What You Missed",
+                  "Welcome Back . Explore What You Missed",
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.darkBlue,
                         fontWeight: FontWeight.normal,
@@ -66,59 +65,62 @@ class LoginScreen extends StatelessWidget {
                   height: context.height * 0.05,
                 ),
                 defaultFormField(
-                    controller: emailController,
-                    type: TextInputType.emailAddress,
-                    validate: () {},
-                    hint: "Email",
-                    prefix: Icons.email_outlined),
+                  controller: emailController,
+                  type: TextInputType.emailAddress,
+                  validate: () {},
+                  hint: "Email",
+                  prefix: Icons.email_outlined,
+                ),
                 SizedBox(
                   height: context.height * 0.02,
                 ),
                 defaultFormField(
-                    controller: passwordController,
-                    type: TextInputType.visiblePassword,
-                    isPassword: true,
-                    validate: () {},
-                    hint: "Password",
-                    prefix: Icons.lock_outlined),
+                  controller: passwordController,
+                  type: TextInputType.visiblePassword,
+                  isPassword: true,
+                  validate: () {},
+                  hint: "Password",
+                  prefix: Icons.lock_outlined,
+                ),
                 SizedBox(
                   height: context.height * 0.01,
                 ),
                 Row(
                   children: [
                     TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Forget password?",
-                          style:
-                              Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                    color: AppColors.darkBlue,
-                                    fontSize: 15,
-                                  ),
-                        )),
+                      onPressed: () {},
+                      child: Text(
+                        "Forget password?",
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              color: AppColors.darkBlue,
+                              fontSize: 15,
+                            ),
+                      ),
+                    ),
                     const Spacer(),
                     TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Show password",
-                          style:
-                              Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                    color: AppColors.darkBlue,
-                                    fontSize: 15,
-                                  ),
-                        )),
+                      onPressed: () {},
+                      child: Text(
+                        "Show password",
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              color: AppColors.darkBlue,
+                              fontSize: 15,
+                            ),
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(height: context.height * 0.01),
                 Center(
                   child: MainButton(
-                      text: "Login",
-                      width: context.width * 0.8,
-                      height: context.height * 0.09,
-                      onTap: () {}),
+                    text: "Login",
+                    width: context.width * 0.8,
+                    height: context.height * 0.09,
+                    onTap: () {},
+                  ),
                 ),
                 SizedBox(height: context.height * 0.01),
-                buildSigninButtons(context),
+                const BuildSignInButtons(),
               ],
             ),
           ),
