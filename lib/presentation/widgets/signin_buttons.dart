@@ -3,6 +3,7 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
+import 'package:real_estate/presentation/widgets/formfilds.dart';
 
 Widget buildSigninButtons (BuildContext context)=>  Column(
   children: [
@@ -71,7 +72,9 @@ Widget buildSigninButtons (BuildContext context)=>  Column(
                       fontWeight: FontWeight.bold,
                       fontSize: 15
 
-                    ),))
+                    ),)),
+
+                    
                   ],
                 ),
   ],
