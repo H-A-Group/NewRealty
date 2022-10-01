@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icon_broken/icon_broken.dart';
 import 'package:real_estate/config/routes/app_routes.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
@@ -96,7 +97,7 @@ class StartUp extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, Routes.logInRout);
                 },
-                icon: Icons.email_outlined,
+                icon: IconBroken.Message,
               ),
               SizedBox(height: context.height * 0.01),
               const BuildSignInButtons(),

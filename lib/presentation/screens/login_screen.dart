@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icon_broken/icon_broken.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
 import 'package:real_estate/presentation/widgets/formfilds.dart';
@@ -69,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                   type: TextInputType.emailAddress,
                   validate: () {},
                   hint: "Email",
-                  prefix: Icons.email_outlined,
+                  prefix: IconBroken.Message,
                 ),
                 SizedBox(
                   height: context.height * 0.02,
@@ -80,7 +81,7 @@ class LoginScreen extends StatelessWidget {
                   isPassword: true,
                   validate: () {},
                   hint: "Password",
-                  prefix: Icons.lock_outlined,
+                  prefix: IconBroken.Lock,
                 ),
                 SizedBox(
                   height: context.height * 0.01,
