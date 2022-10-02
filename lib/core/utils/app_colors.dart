@@ -5,7 +5,7 @@ class AppColors {
   static Color primary = HexColor('234F68');
   static Color lightPrimary = HexColor('577E93');
   static Color darkBlue = HexColor('252B5C');
-  static Color lightGrey = HexColor('53587A');
+  static Color lightGrey = HexColor('E8E7E4');
   static Color grey = HexColor('DFDFDF');
   static Color green = HexColor('8BC83F');
   static Color white = Colors.white;

@@ -38,7 +38,7 @@ class AppRoutes {
         
          case Routes.registerRout:
         return CupertinoPageRoute(builder: (context) {
-          return const SignupScreen();
+          return  SignupScreen();
         });
       default:
         return undefinedRoute();
