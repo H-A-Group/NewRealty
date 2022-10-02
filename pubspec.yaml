@@ -14,7 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.0.0+2
   flutter_svg: ^1.1.5
-  icon_broken: ^1.0.0
+  icon_broken: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -27,7 +27,4 @@ flutter:
     - assets/images/
     - assets/images/logo/
     - assets/icons/
-  fonts:
-    - family: IconBroken
-      fonts:
-        - asset: packages/icon_broken/assets/font/icons.ttf
+
