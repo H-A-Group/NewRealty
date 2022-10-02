@@ -25,14 +25,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       image: ImageAssets.onBoarding1,
     ),
     const OnBoardingItem(
-      normalText: 'Fast sell your property \nin just',
+      normalText: 'Fast sell your property \nin just ',
       boldText: 'one click',
       captionText:
           'Lorem ipsum dolor sit amet, consectetur\n adipiscing elit, sed.',
       image: ImageAssets.onBoarding2,
     ),
     const OnBoardingItem(
-      normalText: 'Find perfect choice for \nyour',
+      normalText: 'Find perfect choice for \nyour ',
       boldText: 'future house',
       captionText:
           'Lorem ipsum dolor sit amet, consectetur\n adipiscing elit, sed.',

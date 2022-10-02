@@ -12,8 +12,7 @@ class Routes {
   static const String onBoardingRout = '/onBoarding';
   static const String logInRout = '/logIn';
   static const String startupRout = '/startup';
-    static const String registerRout = '/register';
-
+  static const String registerRout = '/register';
 }
 
 class AppRoutes {
@@ -35,17 +34,15 @@ class AppRoutes {
         return CupertinoPageRoute(builder: (context) {
           return LoginScreen();
         });
-        
-         case Routes.registerRout:
+
+      case Routes.registerRout:
         return CupertinoPageRoute(builder: (context) {
-          return  SignupScreen();
+          return SignUpScreen();
         });
       default:
         return undefinedRoute();
     }
   }
-
-
 
   static Route<dynamic> undefinedRoute() {
     return CupertinoPageRoute(
