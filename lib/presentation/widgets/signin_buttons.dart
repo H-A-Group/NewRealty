@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:real_estate/config/routes/app_routes.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
 
@@ -84,7 +85,9 @@ class BuildSignInButtons extends StatelessWidget {
                   .copyWith(color: AppColors.darkBlue, fontSize: 15),
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.registerRout);
+                },
                 child: Text(
                   "Register Now",
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(

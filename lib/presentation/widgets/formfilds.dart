@@ -2,7 +2,7 @@
 import 'package:real_estate/core/utils/app_colors.dart';
 
 
-Widget defaultFormField({
+Widget defaultFormField({ 
 required TextEditingController? controller,
 required TextInputType type,
 Function ?onSubmit,
@@ -12,7 +12,7 @@ bool isPassword = false,
 required Function validate,
 required String hint,
 IconData? prefix,
-IconData ?suffix,
+IconData ? suffix,
 Function ?suffixPressed,
 bool isClickable = true,
 Widget? widget,
@@ -46,6 +46,9 @@ Container(
         enabled: isClickable,
         
         onFieldSubmitted: (s){ onSubmit!(s); },
+        onTap: (){
+           
+        },
         
        
         

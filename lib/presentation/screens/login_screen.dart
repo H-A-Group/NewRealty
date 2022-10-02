@@ -8,8 +8,11 @@ import 'package:real_estate/presentation/widgets/signin_buttons.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
+
+
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -80,8 +83,10 @@ class LoginScreen extends StatelessWidget {
                   type: TextInputType.visiblePassword,
                   isPassword: true,
                   validate: () {},
+                  
                   hint: "Password",
                   prefix: IconBroken.Lock,
+                   
                 ),
                 SizedBox(
                   height: context.height * 0.01,

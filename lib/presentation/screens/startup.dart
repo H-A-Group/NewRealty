@@ -67,6 +67,7 @@ class StartUp extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: context.height * 0.02),
               Row(
                 children: [
                   SizedBox(
@@ -89,7 +90,8 @@ class StartUp extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: context.height * 0.03),
+              
+              SizedBox(height: context.height * 0.02),
               StartButton(
                 text: "Continue with Email",
                 width: context.width * 0.8,
@@ -101,9 +103,7 @@ class StartUp extends StatelessWidget {
               ),
               SizedBox(height: context.height * 0.01),
               const BuildSignInButtons(),
-              SizedBox(
-                height: context.height * 0.03,
-              )
+              
             ],
           ),
         ),
