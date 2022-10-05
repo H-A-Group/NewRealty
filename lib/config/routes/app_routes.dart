@@ -4,6 +4,7 @@ import 'package:real_estate/core/utils/app_strings.dart';
 import 'package:real_estate/presentation/screens/login_screen.dart';
 import 'package:real_estate/presentation/screens/on_boarding_screen.dart';
 import 'package:real_estate/presentation/screens/register_screen.dart';
+import 'package:real_estate/presentation/screens/services_screen.dart';
 import 'package:real_estate/presentation/screens/splash_screen.dart';
 import 'package:real_estate/presentation/screens/startup.dart';
 
@@ -12,7 +13,9 @@ class Routes {
   static const String onBoardingRout = '/onBoarding';
   static const String logInRout = '/logIn';
   static const String startupRout = '/startup';
-    static const String registerRout = '/register';
+  static const String registerRout = '/register';
+  static const String servicesRout = '/service';
+
 
 }
 
@@ -40,6 +43,12 @@ class AppRoutes {
         return CupertinoPageRoute(builder: (context) {
           return  SignupScreen();
         });
+
+           case Routes.servicesRout:
+        return CupertinoPageRoute(builder: (context) {
+          return   ServiseScreen();
+        });
+
       default:
         return undefinedRoute();
     }

@@ -89,7 +89,11 @@ class SignupScreen extends StatelessWidget {
                SizedBox(height: context.height*0.03,),
                Row(
                 children: [
-                TextButton(onPressed: (){}, child: Text("Terms of service",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                TextButton(onPressed: (){
+
+                  Navigator.pushNamed(context, Routes.servicesRout);
+
+                }, child: Text("Terms of service",style: Theme.of(context).textTheme.bodyText2!.copyWith(
                      color: AppColors.primary,
                      fontSize: 15
                   ),
