@@ -14,9 +14,12 @@ class Routes {
   static const String logInRout = '/logIn';
   static const String startupRout = '/startup';
   static const String registerRout = '/register';
+<<<<<<< HEAD
   static const String servicesRout = '/service';
 
 
+=======
+>>>>>>> c25f0d0eb14c41165ceba32d8e14657c5569d551
 }
 
 class AppRoutes {
@@ -38,10 +41,10 @@ class AppRoutes {
         return CupertinoPageRoute(builder: (context) {
           return LoginScreen();
         });
-        
-         case Routes.registerRout:
+
+      case Routes.registerRout:
         return CupertinoPageRoute(builder: (context) {
-          return  SignupScreen();
+          return SignUpScreen();
         });
 
            case Routes.servicesRout:
@@ -53,8 +56,6 @@ class AppRoutes {
         return undefinedRoute();
     }
   }
-
-
 
   static Route<dynamic> undefinedRoute() {
     return CupertinoPageRoute(
