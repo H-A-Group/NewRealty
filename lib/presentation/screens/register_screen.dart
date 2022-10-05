@@ -91,7 +91,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             defaultFormField(
                 controller: passwordController,
-<<<<<<< HEAD
              type: TextInputType.emailAddress,
               validate: (){},
               prefix: IconBroken.Lock,
@@ -109,11 +108,15 @@ class SignUpScreen extends StatelessWidget {
                      fontSize: 15
                   ),
                   ),
-=======
-                type: TextInputType.emailAddress,
+                ),
+
+                defaultFormField( 
+                  controller: passwordController,
+                   type: TextInputType.emailAddress,
                 validate: () {},
                 prefix: IconBroken.Lock,
                 hint: "Password"),
+
             SizedBox(
               height: context.height * 0.03,
             ),
@@ -127,7 +130,6 @@ class SignUpScreen extends StatelessWidget {
                         .textTheme
                         .bodyText2!
                         .copyWith(color: AppColors.primary, fontSize: 15),
->>>>>>> c25f0d0eb14c41165ceba32d8e14657c5569d551
                   ),
                 ),
                 const Spacer(),
@@ -154,9 +156,11 @@ class SignUpScreen extends StatelessWidget {
                 onTap: () {},
               ),
             ),
-          ],
+                ]
         ),
+          ]
       ),
-    );
+      ),
+      );
   }
 }
