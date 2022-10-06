@@ -11,7 +11,10 @@ Widget buildServicesItem(BuildContext context)=> Column(
                     children: [
                       CircleAvatar(
                         backgroundColor: AppColors.darkBlue,
-                        child: const Icon(IconBroken.Bookmark),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.asset("assets/icons/web.png",),
+                        )
                       ),
                       
                       Text("  Visit our web site",style: Theme.of(context).textTheme.bodySmall!.copyWith(

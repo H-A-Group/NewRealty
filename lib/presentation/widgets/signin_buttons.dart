@@ -86,7 +86,7 @@ class BuildSignInButtons extends StatelessWidget {
             ),
             TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, Routes.registerRout);
+                 Navigator.pushNamed(context, Routes.registerRout);
                 },
                 child: Text(
                   "Register Now",

@@ -15,8 +15,9 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
+    return Scaffold( 
+
+        body: Padding(
         padding: EdgeInsets.only(
           top: context.height * 0.04,
           left: context.width * 0.05,
@@ -37,9 +38,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              height: context.height * 0.06,
-            ),
+            SizedBox( height: context.height * 0.06 ),
             Row(
               children: [
                 Text(
@@ -96,35 +95,11 @@ class SignUpScreen extends StatelessWidget {
               prefix: IconBroken.Lock,
                hint:"Password"),
 
-               SizedBox(height: context.height*0.03,),
-               Row(
-                children: [
-                TextButton(onPressed: (){
-
-                  Navigator.pushNamed(context, Routes.servicesRout);
-
-                }, child: Text("Terms of service",style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                     color: AppColors.primary,
-                     fontSize: 15
-                  ),
-                  ),
-                ),
-
-                defaultFormField( 
-                  controller: passwordController,
-                   type: TextInputType.emailAddress,
-                validate: () {},
-                prefix: IconBroken.Lock,
-                hint: "Password"),
-
-            SizedBox(
-              height: context.height * 0.03,
-            ),
-            Row(
+             Row(
               children: [
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.servicesRout);
+                  Navigator.pushNamed(context, Routes.servicesRout);
                   },
                   child: Text(
                     "Terms of service",
@@ -160,9 +135,9 @@ class SignUpScreen extends StatelessWidget {
             ),
                 ]
         ),
-          ]
+          
       ),
-      ),
+      
       );
   }
 }
