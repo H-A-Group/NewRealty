@@ -15,8 +15,6 @@ class Routes {
   static const String startupRout = '/startup';
   static const String registerRout = '/register';
   static const String servicesRout = '/service';
-
-
 }
 
 class AppRoutes {
@@ -44,9 +42,9 @@ class AppRoutes {
           return SignUpScreen();
         });
 
-           case Routes.servicesRout:
+      case Routes.servicesRout:
         return CupertinoPageRoute(builder: (context) {
-          return   ServiseScreen();
+          return ServicesScreen();
         });
 
       default:

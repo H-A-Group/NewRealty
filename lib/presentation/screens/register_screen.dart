@@ -3,15 +3,15 @@ import 'package:icon_broken/icon_broken.dart';
 import 'package:real_estate/config/routes/app_routes.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
-import 'package:real_estate/presentation/widgets/formfilds.dart';
+import 'package:real_estate/presentation/widgets/form_fields.dart';
 import 'package:real_estate/presentation/widgets/main_button.dart';
 
 class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
+
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
-  SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class SignUpScreen extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "Creat your ",
+                  "Create your ",
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       fontWeight: FontWeight.normal,
                       fontSize: 30,
@@ -91,39 +91,19 @@ class SignUpScreen extends StatelessWidget {
             ),
             defaultFormField(
                 controller: passwordController,
-             type: TextInputType.emailAddress,
-              validate: (){},
-              prefix: IconBroken.Lock,
-               hint:"Password"),
-
-               SizedBox(height: context.height*0.03,),
-               Row(
-                children: [
-                TextButton(onPressed: (){
-
-                  Navigator.pushNamed(context, Routes.servicesRout);
-
-                }, child: Text("Terms of service",style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                     color: AppColors.primary,
-                     fontSize: 15
-                  ),
-                  ),
-                ),
-
-                defaultFormField( 
-                  controller: passwordController,
-                   type: TextInputType.emailAddress,
+                type: TextInputType.emailAddress,
                 validate: () {},
                 prefix: IconBroken.Lock,
                 hint: "Password"),
-
             SizedBox(
               height: context.height * 0.03,
             ),
             Row(
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.servicesRout);
+                  },
                   child: Text(
                     "Terms of service",
                     style: Theme.of(context)
@@ -132,35 +112,56 @@ class SignUpScreen extends StatelessWidget {
                         .copyWith(color: AppColors.primary, fontSize: 15),
                   ),
                 ),
-                const Spacer(),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Show password",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2!
-                        .copyWith(color: AppColors.primary, fontSize: 15),
+                defaultFormField(
+                    controller: passwordController,
+                    type: TextInputType.emailAddress,
+                    validate: () {},
+                    prefix: IconBroken.Lock,
+                    hint: "Password"),
+                SizedBox(
+                  height: context.height * 0.03,
+                ),
+                Row(
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Terms of service",
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText2!
+                            .copyWith(color: AppColors.primary, fontSize: 15),
+                      ),
+                    ),
+                    const Spacer(),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Show password",
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText2!
+                            .copyWith(color: AppColors.primary, fontSize: 15),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: context.height * 0.05,
+                ),
+                Center(
+                  child: MainButton(
+                    text: "Register",
+                    width: context.width * 0.8,
+                    height: context.height * 0.09,
+                    onTap: () {},
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: context.height * 0.05,
-            ),
-            Center(
-              child: MainButton(
-                text: "Register",
-                width: context.width * 0.8,
-                height: context.height * 0.09,
-                onTap: () {},
-              ),
-            ),
-                ]
+          ],
         ),
-          ]
       ),
-      ),
-      );
+    );
   }
 }
