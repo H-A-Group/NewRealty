@@ -123,7 +123,9 @@ class SignUpScreen extends StatelessWidget {
             Row(
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.servicesRout);
+                  },
                   child: Text(
                     "Terms of service",
                     style: Theme.of(context)
