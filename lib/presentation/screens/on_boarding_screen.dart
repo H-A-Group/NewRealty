@@ -89,6 +89,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         alignment: Alignment.bottomCenter,
         children: [
           PageView(
+            physics: const BouncingScrollPhysics(),
             controller: _pageController,
             children: screens,
             onPageChanged: (int index) {

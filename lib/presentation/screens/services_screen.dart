@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:icon_broken/icon_broken.dart';
-import 'package:real_estate/config/routes/app_routes.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
 import 'package:real_estate/presentation/widgets/form_fields.dart';
@@ -28,8 +27,7 @@ class ServicesScreen extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pushReplacementNamed(
-                        context, Routes.registerRout);
+                    Navigator.pop(context);
                   },
                   child: CircleAvatar(
                     backgroundColor: AppColors.lightGrey,

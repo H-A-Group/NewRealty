@@ -46,10 +46,6 @@ class OnBoardingItem extends StatelessWidget {
             ],
           ),
         ),
-
-        // SizedBox(
-        //   height: context.height * 0.046,
-        // ),
         const Spacer(),
         Container(
           width: context.width,

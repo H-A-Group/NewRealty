@@ -49,9 +49,12 @@ class BuildSignInButtons extends StatelessWidget {
                 width: context.width * 0.23,
                 height: context.width * 0.13,
                 decoration: BoxDecoration(
-                    color: AppColors.grey,
-                    borderRadius: BorderRadius.circular(40)),
-                child: Center(child: SvgPicture.asset("assets/icons/g.svg")),
+                  color: AppColors.grey,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: Center(
+                  child: SvgPicture.asset("assets/icons/g.svg"),
+                ),
               ),
             ),
             SizedBox(
@@ -66,7 +69,9 @@ class BuildSignInButtons extends StatelessWidget {
                   color: AppColors.grey,
                   borderRadius: BorderRadius.circular(40),
                 ),
-                child: Center(child: SvgPicture.asset("assets/icons/f.svg")),
+                child: Center(
+                  child: SvgPicture.asset("assets/icons/f.svg"),
+                ),
               ),
             ),
           ],
@@ -78,29 +83,28 @@ class BuildSignInButtons extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Dont have an account? ",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyLarge!
-                  .copyWith(color: AppColors.darkBlue, fontSize: 15),
+              "Don't have an account? ",
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    color: AppColors.darkBlue,
+                    fontSize: 15,
+                  ),
             ),
             TextButton(
-                onPressed: () {
-                 Navigator.pushNamed(context, Routes.registerRout);
-                },
-                child: Text(
-                  "Register Now",
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.registerRout);
+              },
+              child: Text(
+                "Register Now",
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: AppColors.darkBlue,
                       fontWeight: FontWeight.bold,
-                      fontSize: 15
-
-                    ),)),
-
-                    
-                  ],
-                ),
-  ],
-);
+                      fontSize: 15,
+                    ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
   }
-  }
+}

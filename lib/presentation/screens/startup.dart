@@ -3,7 +3,7 @@ import 'package:icon_broken/icon_broken.dart';
 import 'package:real_estate/config/routes/app_routes.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
-import 'package:real_estate/presentation/widgets/signin_buttons.dart';
+import 'package:real_estate/presentation/widgets/sign_in_buttons.dart';
 import 'package:real_estate/presentation/widgets/start_button.dart';
 
 class StartUp extends StatelessWidget {
