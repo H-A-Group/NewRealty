@@ -2,16 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:icon_broken/icon_broken.dart';
 import 'package:real_estate/config/routes/app_routes.dart';
 import 'package:real_estate/core/utils/app_colors.dart';
+import 'package:real_estate/core/utils/app_strings.dart';
 import 'package:real_estate/core/utils/media_query_values.dart';
 import 'package:real_estate/presentation/widgets/form_fields.dart';
 import 'package:real_estate/presentation/widgets/services_item.dart';
-import 'package:real_estate/core/utils/app_strings.dart';
 
-class ServiseScreen extends StatelessWidget {
+class ServiseScreen extends StatefulWidget {
    ServiseScreen({super.key});
 
+  @override
+  State<ServiseScreen> createState() => _ServiseScreenState();
+}
+
+class _ServiseScreenState extends State<ServiseScreen> {
   TextEditingController searchController = TextEditingController();
 
+  bool isWhite = true ; 
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +43,7 @@ class ServiseScreen extends StatelessWidget {
                     ),
                   ),
                   
-                  SizedBox(height: context.height*0.06,),
+                  SizedBox(height: context.height*0.03,),
                   
                   Row(
                     children: [
@@ -73,15 +79,144 @@ class ServiseScreen extends StatelessWidget {
         
                     buildServicesItem(context),
         
-                     SizedBox(height: context.height*0.03,),
+                     SizedBox(height: context.height*0.01,),
                      defaultFormField(
                       controller: searchController, 
                      type: TextInputType.text,
                       validate: (){},
                        hint: "Try find 'how to' ",
                        prefix: IconBroken.Search,
-                       ),
-                       //
+                       ), 
+                         SizedBox(height: context.height*0.02,),
+                         Container(
+                          width: context.width*0.9,
+                          height: context.height*0.1,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: AppColors.lightGrey,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row( mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                 InkWell( 
+                                  onTap: (){
+                                    setState(() {
+                                    isWhite = true;
+                                    });
+                                  },
+                                   child: Container(
+                                                             width: context.width*0.4,
+                                                             height: context.height*0.09,
+                                                             decoration: BoxDecoration(
+                                                               borderRadius: BorderRadius.circular(30),
+                                                               color: isWhite ? AppColors.white :  AppColors.lightGrey ,
+                                                             ),
+                                                             child: Center(
+                                                               child: Text("Buyer",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                                                                 color: isWhite ? AppColors.darkBlue :AppColors.grey ,
+                                                                 fontSize: 20,
+                                                                 
+                                                               ),),
+                                                             ),
+                                                          ),
+                                 ),
+                         SizedBox(width: context.width*0.02,),
+                          InkWell( 
+                            onTap: (){
+                              setState(() {
+                                
+                                isWhite = false; 
+                              });
+                            },
+                            child: Container(
+                              width: context.width*0.4,
+                              height: context.height*0.09,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: isWhite ?  AppColors.lightGrey  : AppColors.white,
+                              ),
+                              child: Center(
+                                child: Text("Agent Estate",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                                  color: isWhite ? AppColors.grey : AppColors.darkBlue ,
+                                  fontSize: 20,
+                                  
+                                ),),
+                              ),
+                             ),
+                          ),
+                              ],
+                            ),
+                          ),
+                         ),
+
+                         SizedBox(height: context.height*0.02,),
+
+                         Row(children: [
+                          Text("What is  ${AppStrings.appName} ? ",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                                  color: AppColors.darkBlue ,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
+                                  
+                                ),),
+
+                               const Spacer(),
+                               TextButton(onPressed: (){}, child:  Text("+",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                                  color: AppColors.green ,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
+                                  
+                                ),),
+                         ),
+                         ],),
+                          SizedBox(height: context.height*0.01,),
+
+                         Row( mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                          Text("Why ${AppStrings.appName} ?",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                                  color: AppColors.darkBlue ,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
+                                  
+                                ),),
+
+                               const Spacer(),
+                               TextButton(onPressed: (){}, child:  Text("_",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                                  color: AppColors.green ,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
+                                  
+                                ),),
+                         ),
+                         ],),  
+
+                          SizedBox(height: context.height*0.01,),
+
+                         Container( 
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          gradient: const LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [ 
+                              Color.fromARGB(255, 220, 220, 220),
+                              Colors.white,                            ]
+                            )
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Text(" Computer programming is the process of performing a particular computat on a computer, often for solving a given problem. Proficient programming thus usually requires expertise in several different subjects, including knowledge of the application domain, specialized algorithms, and formal logic. ",style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                                    color: AppColors.darkBlue ,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.normal
+                                    
+                                  ),),
+                          ),
+                         )
+
+
+                                              
         
         
                 ],
