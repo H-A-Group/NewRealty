@@ -37,7 +37,7 @@ Widget buildServicesItem(BuildContext context)=> Column(
                     children: [
                       CircleAvatar(
                         backgroundColor: AppColors.darkBlue,
-                        child: const Icon(IconBroken.Message),
+                        child: const Icon(IconBroken.Message,color: Colors.white,),
                       ),
                       
                       Text("  Email us",style: Theme.of(context).textTheme.bodySmall!.copyWith(
@@ -60,7 +60,7 @@ Widget buildServicesItem(BuildContext context)=> Column(
                     children: [
                       CircleAvatar(
                         backgroundColor: AppColors.darkBlue,
-                        child: const Icon(IconBroken.Paper),
+                        child: const Icon(IconBroken.Paper,color: Colors.white,),
                       ),
                       
                       Text("  Terms of services",style: Theme.of(context).textTheme.bodySmall!.copyWith(

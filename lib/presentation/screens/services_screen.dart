@@ -24,7 +24,7 @@ class _ServiseScreenState extends State<ServiseScreen> {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.only(
-          top: context.height * 0.04,
+          top: context.height * 0.06,
           left: context.width * 0.05,
           right: context.width * 0.05,
         ),
@@ -90,7 +90,7 @@ class _ServiseScreenState extends State<ServiseScreen> {
                          SizedBox(height: context.height*0.02,),
                          Container(
                           width: context.width*0.9,
-                          height: context.height*0.1,
+                          height: context.height*0.085,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: AppColors.lightGrey,

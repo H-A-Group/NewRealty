@@ -46,10 +46,10 @@ class BuildSignInButtons extends StatelessWidget {
             InkWell(
               onTap: () {},
               child: Container(
-                width: context.width * 0.23,
-                height: context.width * 0.13,
+                width: context.width * 0.3,
+                height: context.width * 0.15,
                 decoration: BoxDecoration(
-                  color: AppColors.grey,
+                  color: AppColors.lightGrey,
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: Center(
@@ -58,15 +58,15 @@ class BuildSignInButtons extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: context.width * 0.03,
+              width: context.width * 0.05,
             ),
             InkWell(
               onTap: () {},
               child: Container(
-                width: context.width * 0.23,
-                height: context.width * 0.13,
+                width: context.width * 0.3,
+                height: context.width * 0.15,
                 decoration: BoxDecoration(
-                  color: AppColors.grey,
+                  color: AppColors.lightGrey,
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: Center(
