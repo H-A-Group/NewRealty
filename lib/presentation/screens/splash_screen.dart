@@ -72,7 +72,7 @@ class SplashScreen extends StatelessWidget {
                 ),
                 Text.rich(
                   TextSpan(
-                    text: 'Made with love \n',
+                    text: 'By\n RunTime Terror Team \n',
                     style: Theme.of(context).textTheme.bodyText2!.copyWith(
                           fontWeight: FontWeight.normal,
                         ),
